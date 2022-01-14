@@ -66,9 +66,9 @@ In this project, you will build the retrieve data from a public api, add in a fa
 
   Display a list of the plants from the server. This should be done in the class component `PlantList`. **Unlike other projects, the local server used here can not be accessed through the browser. It is started automatically and without the need for starting a server.js file. Feel free to ignore any messages related to MSW or mock service workers. For this and the rest of your sprint challenges, test the functioning of the server directly through your axios calls.**
 
-* [ ] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants.`
-* [ ] Set the data to a state property called `this.state.plants.`
-* [ ] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart.
+* [x] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants.`
+* [x] Set the data to a state property called `this.state.plants.`
+* [x] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart.
 
 ### Shopping Cart
 
@@ -78,13 +78,13 @@ In this project, you will build the retrieve data from a public api, add in a fa
 
   The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
 
-* [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic. **You do not need to use useLocalStorage to complete this task! localStorage is not necessary for this project. Simply reproduce all functionality for the in module 1 useForm custom hook to complete.**
+* [x] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic. **You do not need to use useLocalStorage to complete this task! localStorage is not necessary for this project. Simply reproduce all functionality for the in module 1 useForm custom hook to complete.**
 
-* [ ] Try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
+* [x] Try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
 
 ### Testing the Checkout Form
-* [ ] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
-* [ ] Fill out code necessary to test that that Checkout form renders without errors.
+* [x] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
+* [x] Fill out code necessary to test that that Checkout form renders without errors.
 * [ ] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
 * [ ] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
 
@@ -117,9 +117,13 @@ test("displays plants in cart", () => {
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers below.
 
 1. What are the main differences between a class-based and a functional component?
+ functional components are peices of code that are usually for the UI that displays something. These codes are 'stateless' and lack some necessary tools in order to produce a more dynamic code. Stateful components to me are more adaptable in the sense that it can display changing data. 
 
 2. When does a componentWillMount function be called? What about a componentDidUpdate?
+the componentWillMount function gets called right before the component mounts on the DOM. componentWillUpdate is usually called whenever the component is updated, it will also be used when the information changes. 
 
 3. Define stateful logic.
+Stateful logic is logic that is placed in a component. This logic usually deals with the manipulation of state inside of a component. An example could be an on click handler that displays state or toggling an event that deals with state information. These would all be considered stateful logic. 
 
 4. What are the three step of creating a successful test? What is done in each phase? 
+ arrange, act and assert are the three phases. During the arrange phase all we do is render the desired component to our test. The act phase usually specifies the area in which we would like to run our test. The final stage is all about outcome did the element render like it was supposed to or do we have the desired result. If this is the case and we do have the desired result then the test will pass. 
